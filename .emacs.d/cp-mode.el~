@@ -1,9 +1,0 @@
-(defun cp-mode()
-  "Major mode for coding practice.
-Turning on cp-mode runs the hook 'cp-mode-hook'."
-  (interactive)
-  (kill-all-local-variable)
-  (setq mode-name "Coding practice")
-  (setq major-mode 'cp-mode)
-  (run hooks 'cp-mode-hook)
-)
