@@ -1,9 +1,11 @@
-(add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/lisp")
+
+(require 'cl)
 (require 'tomorrow-night-eighties-theme)
-;;(load-file "~/.emacs.d/color-theme-tomorrow.el")
+;;(load-file "~/.emacs.d/lisp/color-theme-tomorrow.el")
 ;;(require 'tomorrow-night-theme)
-;(load-file "~/.emacs.d/tomorrow-night-theme.el")
+;(load-file "~/.emacs.d/lisp/tomorrow-night-theme.el")
 ;(tomorrow-night-theme)
 
 ;;(require 'cp-mode)
@@ -46,7 +48,7 @@
   (interactive)
   (compilation-start (concat "python ~/bin/cpplint.py " (buffer-file-name))))
 
-(load "~/.emacs.d/clang-format.el")
+(load "~/.emacs.d/lisp/clang-format.el")
 (add-hook 'c-mode-common-hook (function (lambda () (local-set-key (kbd "TAB") 'clang-format-region))))
 (add-hook 'c-mode-common-hook (function (lambda () (local-set-key (kbd "M-TAB") 'clang-format-buffer))))
 

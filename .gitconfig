@@ -5,3 +5,5 @@
 [user]
 	name = Luke Ye
 	email = disylh@gmail.com
+[push]
+	default = simple
