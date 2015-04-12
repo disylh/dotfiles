@@ -26,8 +26,8 @@ set laststatus=2
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ \ %l\:%c
 
 " Map for clang format
-map <C-K> :pyf ~/workspace/my-config/clang-format.py<CR>
-imap <C-K> <c-o>:pyf ~/workspace/my-config/clang-format.py<CR>
+map <C-K> :pyf ~/.vim/clang-format.py<CR>
+imap <C-K> <c-o>:pyf ~/.vim/clang-format.py<CR>
 
 " Copy and paste with clipboard
 map <F2> :.w !pbcopy<CR><CR>
