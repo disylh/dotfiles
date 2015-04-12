@@ -1,0 +1,43 @@
+"colo slate
+colo Tomorrow-Night-Eighties
+syntax on
+
+set number
+highlight LineNr ctermfg=grey
+
+" Use spaces instead of tabs
+set expandtab
+
+set shiftwidth=2
+set softtabstop=2
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" Change ruler format
+" set rulerformat=%l,%v
+" Always show current position
+" set ruler
+
+" Always show the status line
+set laststatus=2
+" format the status line
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ \ %l\:%c
+
+" Map for clang format
+map <C-K> :pyf ~/workspace/my-config/clang-format.py<CR>
+imap <C-K> <c-o>:pyf ~/workspace/my-config/clang-format.py<CR>
+
+" Copy and paste with clipboard
+map <F2> :.w !pbcopy<CR><CR>
+map <F3> :r !pbpaste<CR>
+
+" Returns true if paste mode is enabled
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    en
+    return ''
+endfunction
+
