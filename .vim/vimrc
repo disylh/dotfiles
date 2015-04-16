@@ -5,6 +5,9 @@ syntax on
 set number
 highlight LineNr ctermfg=grey
 
+set foldmethod=syntax
+set foldlevel=99
+
 " Use spaces instead of tabs
 set expandtab
 
