@@ -15,6 +15,7 @@ for i in `find . -name 'dot*' -print`
 do
   link_file "${PWD}/$i" "${HOME}/${i//dot/}"
 done
+
 link_file "${PWD}/dot.vim/vimrc" "${HOME}/.vimrc"
 link_file "${PWD}/lukeye.zsh-theme" "${HOME}/.oh-my-zsh/themes/lukeye.zsh-theme" 
 
