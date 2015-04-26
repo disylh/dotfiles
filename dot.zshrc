@@ -52,7 +52,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/Users/lukeye/dev/activator-1.2.10
 #export JAVA_HOME=/usr/libexec/java_home
-
+# Allow homebrew's Exuberant CTAGS
+export PATH=/usr/local/bin:$PATH
 # MacPorts Installer addition on 2013-10-26_at_08:36:04: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
