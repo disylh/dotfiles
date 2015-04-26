@@ -44,6 +44,8 @@ filetype plugin indent on    " required
 " " see :h vundle for more details or wiki for FAQ
 " " Put your non-Plugin stuff after this line
 
+" start vim-pathogen
+execute pathogen#infect()
 
 "colo slate
 colo Tomorrow-Night-Eighties
@@ -90,6 +92,8 @@ imap <C-K> <c-o>:pyf ~/.vim/clang-format.py<CR>
 " Copy and paste with clipboard
 map <F2> :.w !pbcopy<CR><CR>
 map <F3> :r !pbpaste<CR>
+vmap <F2> :!pbcopy<CR>  
+vmap <F3> :w !pbcopy<CR><CR> 
 
 " toggle Tarball window
 nmap <F8> :TagbarToggle<CR>
