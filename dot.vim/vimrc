@@ -90,10 +90,10 @@ map <C-K> :pyf ~/.vim/clang-format.py<CR>
 imap <C-K> <c-o>:pyf ~/.vim/clang-format.py<CR>
 
 " Copy and paste with clipboard
-map <F2> :.w !pbcopy<CR><CR>
-map <F3> :r !pbpaste<CR>
-vmap <F2> :!pbcopy<CR>  
-vmap <F3> :w !pbcopy<CR><CR> 
+nmap <F2> :.w !pbcopy<CR><CR>
+nmap <F3> :r !pbpaste<CR>
+vmap <F2> :w !pbcopy<CR><CR> 
+vmap <F3> :!pbcopy<CR>  
 
 " toggle Tarball window
 nmap <F8> :TagbarToggle<CR>
@@ -231,6 +231,7 @@ endif
 """"""""""""""""""""""""""""""""" 
 " plugin
 """"""""""""""""""""""""""""""""" 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+" no need to set manually because of vim-pathogen
+"set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 
