@@ -50,6 +50,7 @@ execute pathogen#infect()
 
 syntax on
 set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
 "colo slate
 "colo Tomorrow-Night-Eighties
