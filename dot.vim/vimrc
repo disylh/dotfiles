@@ -27,6 +27,7 @@ Plugin 'gmarik/Vundle.vim'
 " Plugin 'user/L9', {'name': 'newL9'}
 "
 Plugin 'majutsushi/tagbar.git'
+Plugin 'altercation/vim-colors-solarized'
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -47,12 +48,14 @@ filetype plugin indent on    " required
 " start vim-pathogen
 execute pathogen#infect()
 
-"colo slate
-colo Tomorrow-Night-Eighties
 syntax on
+set background=dark
+colorscheme solarized
+"colo slate
+"colo Tomorrow-Night-Eighties
 
 set number
-highlight LineNr ctermfg=grey
+"highlight LineNr ctermfg=grey
 
 set foldmethod=syntax
 set foldlevel=99
@@ -84,6 +87,9 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ \ %l\:%
 
 " set file explorer to display at NerdTree's file tree style
 let g:netrw_liststyle=3
+
+" use blowfish insteal of zip to encrypt file
+set cm=blowfish
 
 " Map for clang format
 map <C-K> :pyf ~/.vim/clang-format.py<CR>
