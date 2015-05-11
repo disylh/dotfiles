@@ -49,9 +49,12 @@ filetype plugin indent on    " required
 execute pathogen#infect()
 
 syntax on
+" setting for solarized theme
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+
+"color codeschool
 "colo slate
 "colo Tomorrow-Night-Eighties
 
