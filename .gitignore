@@ -1,4 +1,6 @@
 dot.vim/.netrwhist
 *.swp
+dot.vim/bundle/ctrlp.vim
 dot.vim/bundle/tagbar
 dot.vim/bundle/vim-colors-solarized/
+dot.vim/bundle/gilligan/vim-lldb
