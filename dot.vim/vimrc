@@ -1,3 +1,7 @@
+if has("unix")
+    let s:uname = substitute(system("uname -s"), '\n', '', '')
+endif
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -13,7 +17,9 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar.git'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'gilligan/vim-lldb'
+if s:uname == "Darwin"
+  Plugin 'gilligan/vim-lldb'
+endif
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -33,16 +39,16 @@ filetype plugin indent on    " required
 
 syntax on
 " setting for solarized theme
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+"set background=dark
+"let g:solarized_termcolors=256
+"colorscheme solarized
 
 "color codeschool
 "colo slate
 "colo Tomorrow-Night-Eighties
 
 set number
-"highlight LineNr ctermfg=grey
+highlight LineNr ctermfg=darkgrey
 
 set foldmethod=syntax
 set foldlevel=99
@@ -78,15 +84,17 @@ let g:netrw_liststyle=3
 " use blowfish insteal of zip to encrypt file
 set cm=blowfish
 
-" Map for clang format
-map <C-K> :pyf ~/.vim/clang-format.py<CR>
-imap <C-K> <c-o>:pyf ~/.vim/clang-format.py<CR>
-
-" Copy and paste with clipboard
-nmap <F2> :.w !pbcopy<CR><CR>
-nmap <F3> :r !pbpaste<CR>
-vmap <F2> :w !pbcopy<CR><CR> 
-vmap <F3> :!pbcopy<CR>  
+if s:uname == "Darwin"
+  " Map for clang format
+  map <C-K> :pyf ~/.vim/clang-format.py<CR>
+  imap <C-K> <c-o>:pyf ~/.vim/clang-format.py<CR>
+  
+  " Copy and paste with clipboard
+  nmap <F2> :.w !pbcopy<CR><CR>
+  nmap <F3> :r !pbpaste<CR>
+  vmap <F2> :w !pbcopy<CR><CR> 
+  vmap <F3> :!pbcopy<CR>  
+endif
 
 " toggle Tarball window
 nmap <F8> :TagbarToggle<CR>
