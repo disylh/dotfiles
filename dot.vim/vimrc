@@ -17,6 +17,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar.git'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'fatih/vim-go'
 if s:uname == "Darwin"
   Plugin 'gilligan/vim-lldb'
 endif
