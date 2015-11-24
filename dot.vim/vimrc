@@ -106,6 +106,15 @@ nmap <F8> :TagbarToggle<CR>
 " map F9 key to run make
 map <F9> :make<CR>
 
+" buffer access
+set wildchar=<Tab> wildmenu wildmode=full
+
+let c = 1
+while c <= 99
+  execute "nnoremap " . c . "gb :" . c . "b\<CR>"
+  let c += 1
+endwhile
+
 " Returns true if paste mode is enabled
 function! HasPaste()
     if &paste
