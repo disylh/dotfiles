@@ -19,6 +19,7 @@ Plugin 'majutsushi/tagbar.git'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-fugitive'
+Plugin 'lepture/vim-velocity'
 if s:uname == "Darwin"
   Plugin 'gilligan/vim-lldb'
 endif
