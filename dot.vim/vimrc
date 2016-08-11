@@ -19,6 +19,7 @@ Plugin 'majutsushi/tagbar.git'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
 Plugin 'lepture/vim-velocity'
+Plugin 'mirlord/vim-dust'
 if s:uname == "Darwin"
   Plugin 'gilligan/vim-lldb'
 endif
@@ -88,6 +89,8 @@ let g:netrw_liststyle=3
 
 " use blowfish insteal of zip to encrypt file
 set cm=blowfish
+
+set shell+=\ --login
 
 if s:uname == "Darwin"
   " Map for clang format
@@ -273,4 +276,8 @@ let g:tagbar_type_go = {
 """"""""""""""""""""""""""""""""" 
 " plugin
 """"""""""""""""""""""""""""""""" 
+" ctrlp
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
+
 
