@@ -43,9 +43,9 @@ filetype plugin indent on    " required
 
 syntax on
 " setting for solarized theme
-"set background=dark
+set background=dark
 "let g:solarized_termcolors=256
-"colorscheme solarized
+colorscheme solarized
 
 "color codeschool
 "colo slate
