@@ -58,7 +58,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-export PATH="$PATH:~/.iterm2/tools"
+export PATH="$PATH:${HOME}/.iterm2/tools"
 
 # shortcut
 alias q="exit"
