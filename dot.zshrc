@@ -58,6 +58,16 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-alias emacs='/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs -nw -l ~/.emacs.d/.init.el'
+export PATH="$PATH:~/.iterm2/tools"
 
-alias emacsclient='/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient'
+# shortcut
+alias q="exit"
+alias shrc='vim ~/.zshrc'
+alias shrc-source='source ~/.zshrc'
+
+# emacs
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw -l ~/.emacs.d/.init.el'
+alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
+
+
+
