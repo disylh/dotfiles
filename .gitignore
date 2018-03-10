@@ -9,4 +9,4 @@ dot.vim/bundle/vim-fugitive
 dot.vim/bundle/vim-velocity
 dot.vim/bundle/vim-dust
 dot.vim/bundle/a.vim
-
+.DS_Store
