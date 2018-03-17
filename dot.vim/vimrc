@@ -229,3 +229,7 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
 " a.vim (add customized search path)
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc'
 
+" suppress vim-go warning
+let g:go_version_warning = 0
+
+
