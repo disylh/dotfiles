@@ -1,12 +1,14 @@
-dot.vim/.netrwhist
 *.swp
+.DS_Store
+dot.vim/.netrwhist
 dot.vim/bundle/ctrlp.vim
 dot.vim/bundle/tagbar
-dot.vim/bundle/vim-colors-solarized/
+dot.vim/bundle/vim-colors-solarized
 dot.vim/bundle/vim-lldb
 dot.vim/bundle/vim-go
 dot.vim/bundle/vim-fugitive
 dot.vim/bundle/vim-velocity
 dot.vim/bundle/vim-dust
 dot.vim/bundle/a.vim
-.DS_Store
+dot.vim/bundle/ZoomWin
+

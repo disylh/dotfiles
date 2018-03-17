@@ -22,9 +22,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'lepture/vim-velocity'
 Plugin 'mirlord/vim-dust'
 Plugin 'disylh/a.vim'
-if s:uname == "Darwin"
-  Plugin 'gilligan/vim-lldb'
-endif
+Plugin 'vim-scripts/ZoomWin'
+""if s:uname == "Darwin"
+""  Plugin 'gilligan/vim-lldb'
+""endif
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

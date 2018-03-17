@@ -45,29 +45,39 @@ ZSH_THEME="lukeye"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
+plugins=(git osx autojump)
 
 # Customize to your needs...
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/Users/lukeye/dev/activator-1.2.10
-#export JAVA_HOME=/usr/libexec/java_home
-# Allow homebrew's Exuberant CTAGS
-export PATH=/usr/local/bin:$PATH
-# MacPorts Installer addition on 2013-10-26_at_08:36:04: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="$PATH:${HOME}/.iterm2/tools"
+
+[[ -s /usr/local/etc/profile.d/autojump.sh ]] && . /usr/local/etc/profile.d/autojump.sh
+
+source $ZSH/oh-my-zsh.sh
 
 # shortcut
 alias q="exit"
 alias shrc='vim ~/.zshrc'
 alias shrc-source='source ~/.zshrc'
+alias vimrc="vim ~/.vim/vimrc"
+
+alias -s html=vim
+alias -s rb=vim
+alias -s py=vim
+alias -s js=vim
+alias -s c=vim
+alias -s cc=vim
+alias -s cpp=vim
+alias -s java=vim
+alias -s txt=vim
+alias -s gz='tar -xzvf'
+alias -s tgz='tar -xzvf'
+alias -s zip='unzip'
+alias -s bz2='tar -xjvf'
 
 # emacs
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw -l ~/.emacs.d/.init.el'
 alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
-
-
 
