@@ -90,7 +90,9 @@ set includeexpr=substitute(v:fname,'\\.','/','g')
 " Always show the status line
 set laststatus=2
 " format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ \ %l\:%c
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ \ %l/%L\:%c
+"set statusline=%<\ %n:%F%m%r%h\ %y\ %w\ \ \ \ \ \ %=%-24.(%l/%L\,%c\ %P%)
+set statusline=%<\ %n:%F%m%r%h%y\ %w\ \ \ \ \ \ %=%{&fileencoding?&fileencoding:&encoding}\ %l/%L\,%c\ %P\ 
 
 "" open all command line arguments in new tagpage
 "autocmd VimEnter * tab all
