@@ -53,7 +53,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="$PATH:${HOME}/.iterm2/tools"
 
-[[ -s /usr/local/etc/profile.d/autojump.sh ]] && . /usr/local/etc/profile.d/autojump.sh
+#[[ -s /usr/local/etc/profile.d/autojump.sh ]] && . /usr/local/etc/profile.d/autojump.sh
 
 source $ZSH/oh-my-zsh.sh
 
