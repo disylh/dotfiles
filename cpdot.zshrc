@@ -42,10 +42,24 @@ ZSH_THEME="lukeye"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+platform='unknown'
+unamestr="$(uname)"
+if [[ "$unamestr" == 'Linux' ]]; then
+  platform='linux'
+elif [[ "$unamestr" == 'FreeBSD' ]]; then
+  platform='freebsd'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+  platform='osx'
+fi
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx autojump)
+if [[ "$platform" == 'osx' ]]; then
+  plugins=(git autojump osx)
+else
+  plugins=(git autojump)
+fi
 
 # Customize to your needs...
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
@@ -87,6 +101,6 @@ alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 
 # emacs
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw -l ~/.emacs.d/.init.el'
-alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
+#alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw -l ~/.emacs.d/.init.el'
+#alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
 
