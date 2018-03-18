@@ -52,5 +52,5 @@ do
 done
 
 link_file "${PWD}/dot.vim/vimrc" "${HOME}/.vimrc"
-link_file "${PWD}/lukeye.zsh-theme" "${HOME}/.oh-my-zsh/themes/lukeye.zsh-theme" 
+copy_file "${PWD}/lukeye.zsh-theme" "${HOME}/.oh-my-zsh/themes/lukeye.zsh-theme" 
 
