@@ -72,6 +72,9 @@ export PATH="$PATH:${HOME}/.iterm2/tools"
 source $ZSH/oh-my-zsh.sh
 
 # shortcut
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 alias q="exit"
 alias shrc='vim ~/.zshrc'
 alias shrc-source='source ~/.zshrc'

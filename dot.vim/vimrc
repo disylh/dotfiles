@@ -234,4 +234,9 @@ let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc'
 " suppress vim-go warning
 let g:go_version_warning = 0
 
+let g:S = 0  "result in global variable S
+function! Sum(number)
+    let g:S = g:S + a:number
+    return a:number
+endfunction
 
